@@ -1,0 +1,29 @@
+.dignity {
+padding-top: 94px;
+
+    &__list {
+    @include flex-space;
+    }
+
+    &__icon {
+    padding-bottom: 30px;
+    }
+
+    &__title {
+    @include text-description(14px, $nav-text, bold, 1.2, 0.03em);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    }
+
+    &__text {
+    @include text-description(14px, null, normal, 1.7, 0.03em);
+    }
+}
+
+.dignity__list li{
+width: 270px;
+}
+
+.dignity__list li:not(:first-child) {
+margin-left: 30px;
+}

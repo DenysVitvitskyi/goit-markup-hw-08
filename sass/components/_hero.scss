@@ -1,0 +1,28 @@
+.hero {
+@include cover-background;
+@include margin-auto;
+@include padding(200px, null, 200px, null);
+max-width: 1600px;
+background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+
+    &__contaner {
+    @include align-center;
+    }
+
+    &__heading {
+    @include text-description(44px, $hero-text, 900, 1.4,  0.06em);
+    @include margin-auto;
+    text-transform: uppercase;
+    width: 696px;
+    padding-bottom: 30px;
+    }
+}
+
+.white {
+@include text-description(16px, $hero-text, null, 1.8,  0.06em);
+@include padding(10px, 32px, 10px, 32px);
+display: inline-block;
+background: #2196F3;
+border-radius: 4px;
+cursor: pointer;
+}

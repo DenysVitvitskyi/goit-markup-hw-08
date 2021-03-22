@@ -1,0 +1,132 @@
+.footer {
+@include padding(60px, null, 60px, null);
+background: #2F303A;
+    &__brand {
+    @include text-description(26px, $hero-text, bold, 1.2, 0.03em);
+    display: inline-block;
+    font-family: Raleway;
+    margin-bottom: 20px;
+    }
+    &__location {
+    @include text-description(14px, $hero-text, null, 1.7, 0.03em);
+    display: inline-block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+        color: $focus-color;
+        }
+    }
+    &__address {
+    @include text-description(14px, $adress-color, null, 1.7, 0.03em);
+    display: inline-block;
+    align-items: baseline;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+        color: $focus-color;
+        }
+    }
+    &__tittle {
+    @include text-description(14px, $hero-text, 700, 1.14, 00.03em);
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    }
+}
+
+.footer__social--list {
+@include flex-center;
+@include size(206px, 44px);
+}
+
+.footer__contacts--list li:not(:last-child) {
+@include margin(9px, null, 9px, null);
+}
+
+.footer__social--icon {
+@include size(20px, 20px);
+display: flex;
+margin: 12px;
+}
+
+.footer__social {
+    align-items: baseline;
+    margin-left: 70px;
+    &--icon {
+    @include size(20px, 20px);
+    fill: currentColor;
+    display: flex;
+    margin: 12px;
+    }
+    &--contaner {
+    display: flex;
+    }
+    &--link {
+        color: $hero-text;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+        color: $hero-text;
+        background-color: $focus-color;
+        }
+    }
+}
+
+.footer__social--list li:not(:first-child) {
+margin-left: 10px;
+}
+
+.footer .contaner {
+display: flex;
+justify-content: space-between;
+}
+
+.footer__section--form {
+margin-left: 93px;
+}
+
+.footer__button {
+@include flex-center;
+@include size(200px, 50px);
+@include text-description(16px, $hero-text, bold, 1.875, null);
+@include margin(35px, null, null, 12px);
+border: none;
+background-color: $focus-color;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+cursor: pointer;
+    &--icon {
+    @include size(24px, 24px);
+    fill: currentColor;
+    margin-left: 10px;
+    }
+}
+
+.footer__form {
+display: flex;
+    &--label {
+    @include text-description(14px, $hero-text, 700, 1.15, 0.03em);
+    text-transform: uppercase;
+    }  
+    &--input {
+    @include size(358px, 50px);
+    @include input-block;
+    @include border(1px, solid, rgba(255, 255, 255, 0.3), 4px);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    background-color: #2F303A;
+    margin-top: 20px;
+    padding-left: 16px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+        border-color: $focus-color;
+        color: rgba(255, 255, 255, 0.6);
+        }
+    }
+}
+
+.footer__form--input:hover::placeholder,
+.footer__form--input:focus::placeholder {
+color: rgba(255, 255, 255, 0.6);
+}

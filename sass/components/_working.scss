@@ -1,0 +1,29 @@
+.working {
+@include padding(94px, null, 94px, null);
+    &__list {
+    display: flex;
+    justify-content: space-between;
+        &--tumb {
+        position: relative;
+        z-index: 1;
+        }
+    }
+}
+
+.working__list .overlay {
+@include text-description(14px, $hero-text, 700, 1.17, null);
+@include indent(null, null, 0, 0);
+@include align-center;
+position: absolute;
+width: 100%;
+padding: 27px 0;
+background-color: rgba(47, 48, 58, 0.8);
+text-transform: uppercase;
+z-index: 1;
+}
+
+.table {
+@include text-description(36px, $nav-text, bold, 1.2, 0.03em);
+text-align: center;
+margin-bottom: 50px;
+}

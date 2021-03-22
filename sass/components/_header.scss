@@ -1,0 +1,95 @@
+.header {
+position: relative;
+border-bottom: 1px solid #ECECEC;
+}
+
+.nav__list,
+.contact__list {
+display: flex;
+}
+
+.header__nav {
+@include flex-space;
+}
+
+.nav__list {
+    padding-left: 93px;
+
+    & li:not(:first-child){
+    margin-left: 50px;
+    }
+}
+
+.contact__list {
+margin-left: 305px;
+
+    & li:last-child{
+    margin-left: 30px;
+    }
+}
+
+.brand {
+@include text-description(26px, $studio-color, bold, 1.2, null);
+font-family: Raleway;
+}
+
+.web {
+color: $brand-color;
+}
+
+.navigator {
+@include text-description(14px, $nav-text, 500, 1.2, 0.02em);
+@include padding(32px, 0, 32px, 0);
+display: block;
+position: relative;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+    color: $focus-color;
+    }
+}
+
+
+
+.telephone {
+@include flex-center;
+@include text-description(14px, $tel-text, 500, 1.2, 0.02em);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+    color: $focus-color;
+    }
+}
+
+
+.icon__phone {
+@include size(10px, 16px);
+fill: currentColor;
+}
+
+.icon__mail {
+@include size(16px, 12px);
+fill: currentColor;
+}
+
+.icon__mail,
+.icon__phone {
+margin-right: 10px;
+}
+
+.navigator.current {
+color: $focus-color;
+border-bottom: $focus-color;
+}
+    
+.navigator.current::after {
+content: '';
+@include size(100%, 4px);
+@include indent(null, null, -1px, 0);
+display: block;
+position: absolute;
+border-radius: 2px;
+background-color: $focus-color;
+}
