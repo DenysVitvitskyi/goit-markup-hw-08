@@ -17,6 +17,7 @@ padding-top: 94px;
 
     &__text {
     @include text-description(14px, null, normal, 1.7, 0.03em);
+    color: $tel-text;
     }
 }
 
