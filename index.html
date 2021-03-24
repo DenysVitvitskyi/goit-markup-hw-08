@@ -15,8 +15,10 @@
         <a href="./index.html" class="brand">
             <span class="web">Web</span>Studio
         </a>
-        <button class="menu-button js-open-menu" aria-expanded="false" aria-controls="mobile-menu" data-mobile-menu> 
-            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+        <button class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"> 
+            <svg width="40" height="40">
                 <use class="icon-menu" href="./images/icons.svg#icon-mobile-menu"></use>
             </svg>
         </button>
@@ -116,28 +118,28 @@
         <section class="dignity">
             <div class="contaner">
             <ul class="dignity__list">
-                <li>
+                <li class="dignity__list--item">
                     <svg class="degnity__icon" width="270" hight="120">
                         <use href="./images/icons.svg#icon-group-1"></use>
                     </svg>
                         <h3 class="dignity__title">Внимание к деталям</h3>
                         <p class="dignity__text">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
                 </li>
-                <li>
+                <li class="dignity__list--item">
                     <svg class="degnity__icon" width="270" hight="120">
                         <use href="./images/icons.svg#icon-group-2"></use>
                     </svg>
                     <h3 class="dignity__title">Пунктуальность</h3>
                     <p class="dignity__text">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
                 </li>
-                <li>
+                <li class="dignity__list--item">
                     <svg class="degnity__icon" width="270" hight="120">
                         <use href="./images/icons.svg#icon-group-3"></use>
                     </svg>
                         <h3 class="dignity__title">Планирование</h3>
                         <p class="dignity__text">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
                 </li>
-                <li>
+                <li class="dignity__list--item">
                     <svg class="degnity__icon" width="270" hight="120">
                         <use href="./images/icons.svg#icon-group-4"></use>
                     </svg>
@@ -482,7 +484,7 @@
         </div>
     </footer>
     <div class="menu-container js-menu-container" id="mobile-menu">
-        <button class="menu-button js-close-menu">
+        <button class="menu-toggle js-close-menu">
             <svg width="40" height="40">
                 <use class="icon-cross" href="./images/icons.svg#icon-close"></use>
             </svg>
@@ -490,7 +492,7 @@
         <ul class="mobile-menu">
         
             <li class="mobile-menu__item">
-                <a class="mobile-menu__link" href="./index.html">Студия</a>
+                <a class="mobile-menu__link current" href="./index.html">Студия</a>
             </li>
         
             <li class="mobile-menu__item">
@@ -527,9 +529,12 @@
         </ul>
     
     </div>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
     integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"
+  ></script>
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>

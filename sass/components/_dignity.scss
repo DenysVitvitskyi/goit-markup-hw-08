@@ -3,7 +3,34 @@ padding-top: 94px;
 
     &__list {
     @include flex-space;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+      }
+      @media screen and (min-width: 1200px) {
+        margin: -15px;
+        justify-content: center;
+      }
     }
+
+    .dignity__list--item:not(:last-child) {
+        @media screen and (max-width: 767px) {
+          margin-bottom: 30px;
+        }
+      }
+
+      .dignity__list--item {
+        @media screen and (min-width: 768px) {
+          width: calc((100% - 2 * 30px) / 2);
+          margin: 15px;
+        }
+      
+        @media screen and (min-width: 1200px) {
+          margin: 15px;
+          width: calc((100% - 8 * 30px) / 4);
+        }
+      }
 
     &__icon {
     padding-bottom: 30px;
@@ -13,12 +40,18 @@ padding-top: 94px;
     @include text-description(14px, $nav-text, bold, 1.2, 0.03em);
     text-transform: uppercase;
     margin-bottom: 10px;
+    @media screen and (max-width: 767px) {
+        text-align: center;
+      }
     }
 
     &__text {
     @include text-description(14px, null, normal, 1.7, 0.03em);
     color: $tel-text;
     }
+    @media screen and (max-width: 767px) {
+        padding-bottom: 60px;
+      }
 }
 
 .dignity__list li{
