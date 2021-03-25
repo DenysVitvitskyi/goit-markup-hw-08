@@ -1,63 +1,68 @@
-.dignity {
-padding-top: 94px;
+.advant__container {
+  padding: 60px 15px;
+}
+.advantages {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+  justify-content: center;
 
-    &__list {
-    @include flex-space;
-    @media screen and (min-width: 768px) {
-        display: flex;
-        flex-wrap: wrap;
-        margin: -15px;
-      }
-      @media screen and (min-width: 1200px) {
-        margin: -15px;
-        justify-content: center;
-      }
+  &__item {
+    @media (min-width: 768px) {
+      flex-basis: calc(100% / 2 - 30px);
+      margin-top: 30px;
+      margin-left: 30px;
     }
 
-    .dignity__list--item:not(:last-child) {
-        @media screen and (max-width: 767px) {
-          margin-bottom: 30px;
-        }
-      }
-
-      .dignity__list--item {
-        @media screen and (min-width: 768px) {
-          width: calc((100% - 2 * 30px) / 2);
-          margin: 15px;
-        }
-      
-        @media screen and (min-width: 1200px) {
-          margin: 15px;
-          width: calc((100% - 8 * 30px) / 4);
-        }
-      }
-
-    &__icon {
-    padding-bottom: 30px;
+    @media (min-width: 1200px) {
+      flex-basis: calc(100% / 4 - 30px);
+      margin-top: 30px;
+      margin-left: 30px;
     }
+  }
+  &__item:not(:last-child) {
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
 
-    &__title {
-    @include text-description(14px, $nav-text, bold, 1.2, 0.03em);
+  &__icon {
+    margin-bottom: 30px;
+    height: 120px;
+    border-radius: 4px;
+    background-color: rgba(245, 244, 250, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    color: $studio-color;
     text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.36;
+    letter-spacing: 0.03em;
     margin-bottom: 10px;
-    @media screen and (max-width: 767px) {
-        text-align: center;
-      }
-    }
 
-    &__text {
-    @include text-description(14px, null, normal, 1.7, 0.03em);
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+  .advantages__icon--svg {
+    width: 70px;
+    height: 70px;
+  }
+
+  &__text {
     color: $tel-text;
-    }
-    @media screen and (max-width: 767px) {
-        padding-bottom: 60px;
-      }
-}
-
-.dignity__list li{
-width: 270px;
-}
-
-.dignity__list li:not(:first-child) {
-margin-left: 30px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
