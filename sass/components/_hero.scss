@@ -1,8 +1,9 @@
 .hero {
+  @include  margin-auto;
     min-width: 320px;
     max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
+    // margin-left: auto;
+    // margin-right: auto;
     height: 400px;
     background-position: center;
     background-size: cover;
@@ -77,16 +78,18 @@
     }
   
     &__title {
-      color: $hero-text;
+      @include text-description(26px, $hero-text, 900, 1.66, 1.66);
+      @include margin-auto;
+      // color: $hero-text;
       text-transform: uppercase;
       text-align: center;
-      font-weight: 900;
-      font-size: 26px;
-      line-height: 1.66;
-      letter-spacing: 0.06em;
+      // font-weight: 900;
+      // font-size: 26px;
+      // line-height: 1.66;
+      // letter-spacing: 0.06em;
       max-width: 360px;
-      margin-left: auto;
-      margin-right: auto;
+      // margin-left: auto;
+      // margin-right: auto;
   
       @media (min-width: 1200px) {
         max-width: 696px;
@@ -96,18 +99,20 @@
     }
   
     &__button {
+      @include margin-auto;
+      @include text-description(16px, $hero-text, 700, 1.88, 0.06em);
       display: flex;
-      color: $hero-text;
+      // color: $hero-text;
       background-color: $focus-color;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 1.88;
-      letter-spacing: 0.06em;
+      // font-weight: 700;
+      // font-size: 16px;
+      // line-height: 1.88;
+      // letter-spacing: 0.06em;
       padding: 10px 32px;
       border-radius: 4px;
       margin-top: 30px;
-      margin-left: auto;
-      margin-right: auto;
+      // margin-left: auto;
+      // margin-right: auto;
       cursor: pointer;
     }
   }
