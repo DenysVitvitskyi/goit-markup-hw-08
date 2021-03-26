@@ -3,6 +3,34 @@
     height: $height;
 }
 
+@mixin padding($top, $right, $bottom, $left) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+
+@mixin indent($top, $right, $bottom, $left) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin border($bw, $bs, $bc, $br) {
+    border-width: $bw;
+    border-style: $bs;
+    border-color: $bc;
+    border-radius: $br;
+}
+
 @mixin align-center {
     text-align: center;
     align-items: center;
@@ -12,34 +40,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-@mixin padding($top, $right, $bottom, $left) {
-    padding-top: $top;
-    padding-right: $right;
-    padding-bottom: $bottom;
-    padding-left: $left;
-  }
-
-@mixin indent($top, $right, $bottom, $left) {
-    top: $top;
-    right: $right;
-    bottom: $bottom;
-    left: $left;
-}
-
-  @mixin border($bw, $bs, $bc, $br) {
-    border-width: $bw;
-    border-style: $bs;
-    border-color: $bc;
-    border-radius: $br;
-  }
-
-@mixin margin($top, $right, $bottom, $left) {
-    margin-top: $top;
-    margin-right: $right;
-    margin-bottom: $bottom;
-    margin-left: $left;
 }
 
 @mixin flex-center {
@@ -52,6 +52,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+@mixin inline-center {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @mixin flex-space {

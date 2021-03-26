@@ -1,10 +1,8 @@
 .filters {
     &__list {
+      @include margin(-15px, null, 30px, -8px);
       display: flex;
       flex-wrap: wrap;
-      margin-left: -8px;
-      margin-top: -15px;
-      margin-bottom: 30px;
   
       @media (min-width: 768px) {
         justify-content: center;
@@ -17,17 +15,12 @@
     }
   
     &__item {
-      margin-left: 8px;
-      margin-top: 15px;
+      @include margin(15px, null, null, 8px);
     }
   
     &__button {
+      @include text-description(16px, $studio-color, 500, 1.62, 0.03em);
       text-align: center;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 1.62;
-      letter-spacing: 0.03em;
-      color: $studio-color;
       background-color: rgba(245, 244, 250, 1);
       padding: 6px 22px;
       border-radius: 4px;
