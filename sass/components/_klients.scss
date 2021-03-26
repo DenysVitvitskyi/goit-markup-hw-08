@@ -1,23 +1,17 @@
 .klients__container {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  @include padding(60px, null, 60px, null);
   }
   
   .klients__title {
+    @include text-description(28px, $studio-color, 700, 1.17, 0.03em);
     margin-bottom: 30px;
-    color: $studio-color;
     text-align: center;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
   }
   
   .klients {
+    @include margin(-30px, null, null, -30px);
     display: flex;
     flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
   
     &__item {
       flex-basis: calc(100% / 2 - 30px);
@@ -28,19 +22,14 @@
       @media (min-width: 1200px) {
         flex-basis: calc(100% / 6 - 30px);
       }
-  
-      margin-left: 30px;
-      margin-top: 30px;
+      @include margin(30px, null, null, 30px);
     }
   
     &__link {
+      @include flex-center;
+      @include border(1px, solid, rgba(175, 177, 184, 1), 4px);
       height: 90px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       fill: rgba(175, 177, 184, 1);
-      border: 1px solid rgba(175, 177, 184, 1);
-      border-radius: 4px;
       transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }

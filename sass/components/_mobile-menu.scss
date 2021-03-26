@@ -1,34 +1,26 @@
 .mobile-meny {
+  @include size(100vw, 100vh);
+  @include indent(0, null, null, 0);
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
   padding: 40px;
   overflow-y: scroll;
-
   background-color: $hero-text;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(100%);
 
   &__close {
+    @include indent(10px, 16px, null, null);
+    @include size(40px, 40px);
+    @include inline-center;
     position: absolute;
-    top: 10px;
-    right: 16px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
     background-color: $hero-text;
     border: none;
   }
 
   &__icon {
-    width: 18px;
-    height: 18px;
+    @include size(18px, 18px);
   }
 
   &__icon:hover,
@@ -49,12 +41,7 @@
   }
 
   &__link {
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
-    color: $studio-color;
-
+    @include text-description(40px, $studio-color, 500, 1.17, 0.02em);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -80,19 +67,11 @@
   }
 
   &__tel {
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
-    color: $focus-color;
+    @include text-description(34px, $focus-color, 500, 1.17, 0.02em);
   }
 
   &__mail {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
-    color: $tel-text;
+    @include text-description(24px, $tel-text, 500, 1.17, 0.02em);
   }
 }
 
@@ -108,12 +87,7 @@
   }
 
   &__link {
+    @include text-description(18px, $focus-color, 500, 1.22, 0.02em);
     display: inline-flex;
-
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.22;
-    letter-spacing: 0.02em;
-    color: $focus-color;
   }
 }

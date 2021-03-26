@@ -6,20 +6,15 @@
     }
   
     &__title {
+      @include text-description(28px, $studio-color, 700, 1.17, 0.03em);
       margin-bottom: 30px;
-      color: $studio-color;
       text-align: center;
-      font-weight: 700;
-      font-size: 28px;
-      line-height: 1.17;
-      letter-spacing: 0.03em;
     }
     &__list {
       @media (min-width: 768px) {
+        @include margin(-30px, null, null, -30px);
         display: flex;
         flex-wrap: wrap;
-        margin-top: -30px;
-        margin-left: -30px;
       }
     }
     &__image {
@@ -29,15 +24,13 @@
   
     &__item {
       @media (min-width: 768px) {
+        @include margin(30px, null, null, 30px);
         flex-basis: calc(100% / 2 - 30px);
-        margin-top: 30px;
-        margin-left: 30px;
       }
   
       @media (min-width: 1200px) {
+        @include margin(30px, null, null, 30px);
         flex-basis: calc(100% / 4 - 30px);
-        margin-top: 30px;
-        margin-left: 30px;
       }
   
       @media (max-width: 767px) {
@@ -59,23 +52,14 @@
     }
   
     &__name {
-      color: $studio-color;
+      @include text-description(16px, $studio-color, 500, 1.17, 0.03em);
       text-align: center;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 1.17;
-      letter-spacing: 0.03em;
     }
   
     &__position {
-      color: $tel-text;
+      @include text-description(16px, $tel-text, 400, 1.17, 0.03em);
+      @include margin(10px, null, 16px, null);
       text-align: center;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 1.17;
-      letter-spacing: 0.03em;
-      margin-top: 10px;
-      margin-bottom: 16px;
     }
   }
 
@@ -88,13 +72,9 @@
     }
   
     &__link {
-      display: inline-block;
+      @include size(44px, 44px);
+      @include flex-center;
       border-radius: 50%;
-      width: 44px;
-      height: 44px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   
@@ -119,8 +99,7 @@
     }
   
     &__icon {
-      width: 20px;
-      height: 20px;
+      @include size(20px, 20px);
       fill: currentColor;
     }
   }
