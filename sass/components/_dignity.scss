@@ -1,26 +1,21 @@
-.advant__container {
+.dignity__container {
   padding: 60px 15px;
 }
-.advantages {
+.dignity {
   @media (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -30px;
-    margin-left: -30px;
+    @include wrap-center;
+    @include margin(-30px, null, null, -30px);
   }
-  justify-content: center;
 
   &__item {
     @media (min-width: 768px) {
       flex-basis: calc(100% / 2 - 30px);
-      margin-top: 30px;
-      margin-left: 30px;
+      @include margin(30px, null, null, 30px);
     }
 
     @media (min-width: 1200px) {
       flex-basis: calc(100% / 4 - 30px);
-      margin-top: 30px;
-      margin-left: 30px;
+      @include margin(30px, null, null, 30px);
     }
   }
   &__item:not(:last-child) {
@@ -30,22 +25,16 @@
   }
 
   &__icon {
+    @include flex-center;
     margin-bottom: 30px;
     height: 120px;
     border-radius: 4px;
     background-color: rgba(245, 244, 250, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   &__title {
-    color: $studio-color;
+    @include text-description(14px, $studio-color, 700, 1.36, 0.03em);
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.36;
-    letter-spacing: 0.03em;
     margin-bottom: 10px;
 
     @media (max-width: 767px) {
@@ -53,16 +42,11 @@
     }
   }
 
-  .advantages__icon--svg {
-    width: 70px;
-    height: 70px;
+  .dignity__icon--svg {
+    @include size(70px, 70px);
   }
 
   &__text {
-    color: $tel-text;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include text-description(14px, $tel-text, 400, 1.71, 0.03em);
   }
 }
