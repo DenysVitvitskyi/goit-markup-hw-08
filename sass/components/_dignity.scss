@@ -1,13 +1,24 @@
-.dignity__container {
-  padding: 60px 15px;
-}
 .dignity {
+  @media (max-width: 1199px) {
+    @include padding(60px, null, 60px, null);
+  }
+
+  @media (min-width: 1200px) {
+    @include padding(94px, null, null, null);
+  }
+}
+
+.dignity__container {
+  padding: 0 15px;
+}
+.dignity__list {
   @media (min-width: 768px) {
     @include wrap-center;
     @include margin(-30px, null, null, -30px);
+    // @include margin(94px, null, 94px, null);
   }
 
-  &__item {
+  &--item {
     @media (min-width: 768px) {
       flex-basis: calc(100% / 2 - 30px);
       @include margin(30px, null, null, 30px);
@@ -18,13 +29,13 @@
       @include margin(30px, null, null, 30px);
     }
   }
-  &__item:not(:last-child) {
+  &--item:not(:last-child) {
     @media (max-width: 767px) {
       margin-bottom: 30px;
     }
   }
 
-  &__icon {
+  &--icon {
     @include flex-center;
     margin-bottom: 30px;
     height: 120px;
@@ -32,7 +43,7 @@
     background-color: rgba(245, 244, 250, 1);
   }
 
-  &__title {
+  &--title {
     @include text-description(14px, $studio-color, 700, 1.36, 0.03em);
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -42,11 +53,7 @@
     }
   }
 
-  .dignity__icon--svg {
-    @include size(70px, 70px);
-  }
-
-  &__text {
+  &--text {
     @include text-description(14px, $tel-text, 400, 1.71, 0.03em);
   }
 }

@@ -23,8 +23,8 @@ transform: translate(-50%, -50%) scale(0);
 .modal {
 @include indent(50%, null, null, 50%);
 position: absolute;
-min-width: 528px;
-min-height: 581px;
+min-width: 450px;
+min-height: 609px;
 overflow-y: auto;
 opacity: 1;
 transform: translate(-50%, -50%) scale(1);

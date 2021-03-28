@@ -33,8 +33,11 @@
   transform: translateX(0);
 }
 
+.social__contact {
+  margin-top: auto;
+}
+
 .mobile-nav {
-  margin-bottom: 302px;
 
   &__item:not(:last-child) {
     margin-bottom: 32px;

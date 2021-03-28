@@ -2,13 +2,25 @@
     background-color: rgba(245, 244, 250, 1);
   
     &__container {
-      padding: 60px 15px;
+      @media (max-width: 1199px) {
+        padding: 60px 15px;
+      }
+      @media (min-width: 1200px) {
+        padding: 94px 15px;
+      }
     }
   
     &__title {
-      @include text-description(28px, $studio-color, 700, 1.17, 0.03em);
-      margin-bottom: 30px;
-      text-align: center;
+      @media (max-width: 1199px) { 
+        @include text-description(28px, $studio-color, 700, 1.17, 0.03em);
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      @media (min-width: 1200px) {
+        @include text-description(36px, $studio-color, 700, 1.17, 0.03em);
+        margin-bottom: 50px;
+        text-align: center;
+      }
     }
     &__list {
       @media (min-width: 768px) {
