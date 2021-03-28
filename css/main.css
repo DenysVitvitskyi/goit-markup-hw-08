@@ -778,6 +778,7 @@ img {
   border-radius: 4px;
   margin-top: 30px;
   cursor: pointer;
+  border: none;
 }
 
 .backdrop {
